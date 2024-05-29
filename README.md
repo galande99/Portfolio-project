@@ -1,6 +1,6 @@
 # Personal-Portfolio
 
-## Link - https://sonuk-mehta.vercel.app/
+## Link - https://galande99.github.io/portfolio-project/
 Crafted a dynamic personal portfolio website showcasing skills, projects, and achievements. Responsive layout, and user-friendly interface highlight my expertise.
 
 ## Key Features
