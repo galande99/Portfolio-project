@@ -1,0 +1,525 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* rem is the root font size
+while em is basically the current font size. 
+But that's not really important here because one rem is simply one em */
+
+/* Imp - rem apparently has some bugs in some browsers when used in media queries and therefore we should not use rem in media queries but em. */
+
+/******************************/
+/* BELOW 1344PX (Smaller desktop) */
+/*****************************/
+/* Default value of em or rem is 16px */
+/* 1344px / 16px = 84em */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+    margin-top: 3rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+    line-height: 1.3;
+    letter-spacing: 0.4px;
+  }
+
+  .about-grid {
+    grid-template-columns: 45rem 1fr;
+    row-gap: 8rem;
+    column-gap: 6rem;
+  }
+
+  .services {
+    column-gap: 2.6rem;
+  }
+
+  .service-box p {
+    /* font-size: 1.6rem; */
+    line-height: 1.2;
+  }
+}
+
+/*************************************/
+/* BELOW 1200px (Landscape Tablets) */
+/*************************************/
+
+@media (max-width: 78em) {
+  .section {
+    padding: 3.8rem 7.6rem;
+  }
+
+  .header {
+    padding: 0 2rem;
+  }
+
+  .logo-name {
+    font-size: 3.2rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+    padding: 1.4rem 1.4rem;
+    border-radius: 1rem;
+  }
+
+  .main-nav-list {
+    gap: 1.2rem;
+  }
+
+  .heading-primary {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+
+  .hero-description {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .hero-quote {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero {
+    gap: 6rem;
+    margin-top: 4rem;
+  }
+
+  .btn-hire {
+    width: 12rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 38rem 1fr;
+    row-gap: 8rem;
+    column-gap: 6rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+  }
+
+  .btn-more {
+    font-size: 1.6rem;
+    width: 12rem;
+    height: 5rem;
+    margin-top: 2rem;
+  }
+
+  .service-box {
+    padding: 1.6rem 1.6rem 2.4rem;
+    height: auto;
+  }
+
+  .services-icon {
+    padding: 2rem;
+    font-size: 5.2rem;
+  }
+
+  .service-box h3 {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.35;
+    letter-spacing: 0.7px;
+    margin-bottom: 0px;
+  }
+
+  .service-box h3::after {
+    margin-top: 0.4rem;
+  }
+
+  .service-box p {
+    margin-top: 2rem;
+  }
+}
+
+/*************************************/
+/* BELOW 1050px (Landscape Tablets) */
+/*************************************/
+
+@media (max-width: 65em) {
+  .section {
+    padding: 3.8rem 6rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+  }
+
+  .main-nav-list {
+    gap: 1rem;
+  }
+
+  .hero {
+    margin-top: 6rem;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+
+  .hero-description {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .hero-quote {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .about-grid {
+    grid-template-columns: 30rem 1fr;
+    row-gap: 8rem;
+    column-gap: 6rem;
+  }
+
+  .skills {
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 3.4rem;
+  }
+
+  .portfolio {
+    column-gap: 3rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: var(--bg-color);
+
+    /* here we set header parent elements to relative if we do not header to relative then defalt relative to viewport why we set explain in next comnt*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /*we use this property for menu come from right side 
+      But we need overflow-x hidden so it hide overflow
+      put overflow to body or html elemts to work properly..
+      For properly work we set main-nav position obsolute and parents elemts position header to relative
+      if we not set header to relative then it relative to viewport then our overflow property does not work here important concept for menu-btn*/
+    transform: translateX(100%);
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/***********************************/
+/* BELOW 740px (Smaller tablets) */
+/**********************************/
+
+@media (max-width: 47em) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 4rem;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-top: 3.4rem;
+  }
+
+  .services-icon {
+    font-size: 3rem;
+  }
+
+  .skills {
+    row-gap: 8rem;
+  }
+
+  .skill-img {
+    height: 7rem;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+
+    justify-items: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .portfolio .project {
+    width: 100%;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cta-form {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  .cnt-name-email {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .logo-name {
+    font-size: 2.8rem;
+  }
+  .section {
+    padding: 3rem 4rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+  .hero-img {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .service-box {
+    height: 40rem;
+    width: 38rem;
+  }
+
+  .services-icon {
+    font-size: 4.8rem;
+  }
+
+  .service-box h3 {
+    font-size: 2.8rem;
+  }
+  .service-box p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .skill-right {
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .skills {
+    gap: 4rem;
+  }
+
+  .skill-img {
+    height: 8rem;
+    margin-left: 0px;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .footer .copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: auto;
+  }
+
+  .footer a {
+    padding: 0.2rem;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 24em) {
+  .section-skills {
+    padding: 2rem;
+  }
+}
+/******************************/
+/* Fixing Safari flexbox gap */
+/******************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
